@@ -1,76 +1,53 @@
-<aiml version="1.0.1"encoding="UTF-8">
-<!--basic_chat.aiml-->
-<category>			
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+
+<category>
 	<pattern>HELLO</pattern>
 	<template>
-	What would you like to discuss? : Health,Movies
+		Well, hello!
 	</template>
 </category>
 
 <category>
-	<pattern>Movies,</pattern>
+	<pattern>WHAT ARE YOU</pattern>
 	<template>
-	yes<set name="topic">Movies</set>
-	<template>
-<category>
-
-<category>
-	<pattern>Health</pattern>
-	<template>
-	yes<set name="topic">Health</set>
+		I'm a bot, silly!
 	</template>
 </category>
 
-<topic name="Movies>
-	<category>
-		<pattern>*</pattern>
-		<template>
-			Do you like comedy movies
-		</template>
-	</category>
-
-	<category>
-		<pattern>Yes</pattern>
-		<template>
-			I do like comedy movies
-		</template>
-	<category>
-
-	<category>
-		<pattern>NO</pattern>
-		<template>
-			But i like comdey movies
-		</template>
-	</category>
-</topic>
-
-<topic name ="Health">
-	<category>
-		<pattern>*</pattern>
-		<template>
-			Do you have fever?
-		</template>
-	</category>
-
-	<category>
-		<pattern>Yes</pattern>
-		<template>
-			Please take medicines and proper rest
-		</template>
-	</category>
-	<category>
-		<pattern>No<pattern>
-		<template>
-			Go out for a walk and listen music
-		</template>
-	</category>
-</topic>
-
 <category>
-	<pattern>Nice talking to you</pattern>
+	<pattern>MY NAME IS *</pattern>
 	<template>
-		Same here..!!
+
+		<set name = "username"><star/></set> is the nice name.
+
 	</template>
 </category>
 
+<category>
+	<pattern>I LIKE *</pattern>
+	<template>
+
+		<set name = "liking"><star/></set> is also my favourite.
+
+	</template>
+</category>
+
+<category>
+	<pattern>MY DOG NAME IS *</pattern>
+	<template>
+
+		THAT IS INTERESTING THAT YOU HAVE A DOG NAMED <set name ="dog"><star/></set>.
+
+	</template>
+</category>
+
+<category>
+	<pattern>Bye</pattern>
+	<template>
+
+		Bye!!! <get name = "username"/> Thanks for talking with me.
+
+	</template>
+</category>
 </aiml>

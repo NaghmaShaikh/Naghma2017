@@ -1,7 +1,8 @@
 import aiml
+import time
 # Create the kernel and learn AIML files
 kernel = aiml.Kernel()
-kernel.learn("std-startup1.xml")
+kernel.learn("std-startup.xml")
 kernel.respond("load aiml b")
 
 # Press CTRL-C to break this loop
@@ -12,3 +13,4 @@ while True:
     else:
         bot_response = kernel.respond(message)
         print(bot_response)
+
