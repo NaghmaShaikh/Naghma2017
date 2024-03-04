@@ -1,0 +1,76 @@
+<aiml version="1.0.1"encoding="UTF-8">
+<!--basic_chat.aiml-->
+<category>			
+	<pattern>HELLO</pattern>
+	<template>
+	What would you like to discuss? : Health,Movies
+	</template>
+</category>
+
+<category>
+	<pattern>Movies,</pattern>
+	<template>
+	yes<set name="topic">Movies</set>
+	<template>
+<category>
+
+<category>
+	<pattern>Health</pattern>
+	<template>
+	yes<set name="topic">Health</set>
+	</template>
+</category>
+
+<topic name="Movies>
+	<category>
+		<pattern>*</pattern>
+		<template>
+			Do you like comedy movies
+		</template>
+	</category>
+
+	<category>
+		<pattern>Yes</pattern>
+		<template>
+			I do like comedy movies
+		</template>
+	<category>
+
+	<category>
+		<pattern>NO</pattern>
+		<template>
+			But i like comdey movies
+		</template>
+	</category>
+</topic>
+
+<topic name ="Health">
+	<category>
+		<pattern>*</pattern>
+		<template>
+			Do you have fever?
+		</template>
+	</category>
+
+	<category>
+		<pattern>Yes</pattern>
+		<template>
+			Please take medicines and proper rest
+		</template>
+	</category>
+	<category>
+		<pattern>No<pattern>
+		<template>
+			Go out for a walk and listen music
+		</template>
+	</category>
+</topic>
+
+<category>
+	<pattern>Nice talking to you</pattern>
+	<template>
+		Same here..!!
+	</template>
+</category>
+
+</aiml>
